@@ -1,10 +1,13 @@
 from flask import Flask, render_template
+from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, Length
 
+
 app = Flask(__name__)
 app.secret_key = 'the night is scary'
+Bootstrap(app)
 
 
 class MyForm(FlaskForm):
